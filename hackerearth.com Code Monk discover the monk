@@ -1,0 +1,40 @@
+#include <stdio.h>
+#include <stdlib.h>
+#include <string.h>
+#include <math.h>
+/*C++
+#define MS0(x) memset(x,0,sizeof(x))
+#define MS1(x) memset(x,1,sizeof(x))
+#define SORT(a,n) sort(begin(a),begin(a)+n)
+#define REV(a,n) reverse(begin(a),begin(a)+n)
+*/
+/*int cmpfunc(const void*a,const void*b)
+{
+    return (*(int*)a-*(int*)b);
+} //sorting function.
+item=(int*)bsearch(&key,a,n,sizeof(int),cmpfunc);
+qsort(a,n,sizeof(int),cmpfunc);
+*/
+int cmpfunc(const void*a,const void*b)
+{
+    return (*(int*)a-*(int*)b);
+}
+int main()
+{
+    int n,q,i,item,key;
+    scanf("%d%d",&n,&q);
+    int a[n];
+    for(i=0;i<n;i++)
+    	scanf("%d",&a[i]);
+    	qsort(a,n,sizeof(int),cmpfunc);
+    for(i=0;i<q;i++)
+    {
+        scanf("%d",&key);
+        item=(int*)bsearch(&key,a,n,sizeof(int),cmpfunc);
+        if(item!=NULL)
+            printf("YES\n");
+        else
+            printf("NO\n");
+    }
+ 
+}
