@@ -1,0 +1,47 @@
+https://www.hackerearth.com/code-monk-array-strings/algorithm/prateek-and-his-friends/
+//psudocoder
+
+#include <stdio.h>
+int main()
+{int arr[1000000];
+int i,sum,num[1000000],j;int a;
+//sum=0;
+long n,t,x;
+scanf("%d\n",&t);
+while(t--)
+{scanf("%d %d\n",&n,&x);
+for(i=0;i<n;i++)
+{
+scanf("%d",&num[i]);
+printf("\n");
+ 
+}
+for(i=0;i<n;i++)
+{
+arr[i]=num[i];
+ 
+}
+for(i=0;i<n;i++)
+{sum=0; a=0;
+for(j=i;j<n;j++)
+{ 
+sum=sum+arr[j];
+ 
+if(x==sum)
+{	printf("YES\n");
+a=1;
+break;
+}
+//else
+//continue;
+}
+if(a==1)
+break;
+ 
+}
+if(a==0)
+printf("NO\n");
+ 
+}
+return 0;
+}
