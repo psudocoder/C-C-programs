@@ -1,0 +1,23 @@
+https://www.hackerearth.com/code-monk-array-strings/algorithm/chandu-and-consecutive-letters/
+//psudocoder
+
+#include <stdio.h>
+ 
+int main()
+{
+    int t,i,j,count=0;
+    char c[30];
+    scanf("%d",&t);
+    while(t--)
+    {
+    	scanf("%s",&c);
+    	for(i=0;i<strlen(c);++i)
+    	{
+    		if(c[i]==c[i+1])
+    			continue;
+    		else
+    			printf("%c",c[i]);
+    	}
+    	printf("\n");
+    }
+}
